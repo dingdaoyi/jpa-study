@@ -22,10 +22,23 @@ spring:
 #        dialect: org.hibernate.dialect.MySQL5Dialect
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect #设置创建表的引擎为InnoDB
 
-
   devtools:
     livereload:
       enabled: true #是否支持livereload
       port: 35729
     restart:
       enabled: true #是否支持热部署
+  http:
+    encoding:
+      charset: utf-8
+      force-request: true
+      force: true
+  aop:
+    auto: true
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core: debug
