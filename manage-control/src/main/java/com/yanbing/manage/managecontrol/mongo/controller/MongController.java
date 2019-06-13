@@ -30,7 +30,7 @@ public class MongController {
     @Resource
     private CityRepository repository;
     @PostMapping
-    @SysLog("我要写的内容是:{#city.id}和{#city.provinceId}")
+    @SysLog("我要写的内容是:{#city.getId()}和{@demoBean.say()}")
     public Mono<City> saveCity(@RequestBody  City city) {
       return repository.save(city);
     }
